@@ -17,9 +17,7 @@ const io = new Server(server);
 app.use(cors());
 app.use(express.json());
 
-app.use('/', (req, res) => {
-    res.send('Blog World!');
-});
+
 app.use('/text' ,textRouter);
 app.use('/auth' ,authRouter);
 app.use('/users' ,userRouter);
@@ -27,7 +25,9 @@ app.use('/blogs' ,blogRouter);
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
-
+app.use('/', (req, res) => {
+    res.send('Blog World!');
+});
 server.listen(3000, () => {
     console.log('Socket.io server çalışıyor, port: 3000');
 });
