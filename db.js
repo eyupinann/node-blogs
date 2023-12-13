@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 
 // MongoDB bağlantı adresi
-const dbURI = 'mongodb+srv://mongo_user:ZRN51wc9ATVfzFOW@cluster0.utq8tj9.mongodb.net/blog?retryWrites=true&w=majority';
+const dbURI = '127.0.0.1';
 
 // Mongoose bağlantısını başlatın
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
