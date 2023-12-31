@@ -1,0 +1,12 @@
+# docker-compose.yml
+
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
